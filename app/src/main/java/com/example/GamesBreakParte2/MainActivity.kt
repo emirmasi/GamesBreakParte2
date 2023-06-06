@@ -2,11 +2,26 @@ package com.example.GamesBreakParte2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.practicandodiseo.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity( ) {
+
+    private lateinit var b_crear_usario: Button
+    private lateinit var b_ingresar:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        b_crear_usario = findViewById(R.id.b_crear_usuario)
+        b_ingresar = findViewById(R.id.b_ingresar)
+
+        ///boton para ir a la activity de crear un usuario
+        b_crear_usario.setOnClickListener{
+
+        }
+        //boton para ir a la activity de ingresar
+        b_ingresar.setOnClickListener {
+
+        }
     }
 }

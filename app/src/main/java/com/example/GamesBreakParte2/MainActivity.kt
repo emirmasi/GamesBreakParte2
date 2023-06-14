@@ -3,7 +3,7 @@ package com.example.GamesBreakParte2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.practicandodiseo.R
+import com.example.Diseño.R
 
 class MainActivity : AppCompatActivity( ) {
 

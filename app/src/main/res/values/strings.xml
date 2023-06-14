@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">GameBreakParte2</string>
+    <string name="app_name">GameBreak</string>
     <string name="button_crear_usuario">Crear Usuario</string>
     <string name="button_ingresar">Ingresar</string>
+    <string name="tv_filtrar">Genero</string>
+    <string name="items_label">Items</string>
 
 </resources>

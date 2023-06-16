@@ -11,18 +11,11 @@
         android:theme="@style/Theme.PracticandoDiseño"
         tools:targetApi="31">
         <activity
-            android:name=".gamesActivity"
+            android:name="com.example.Diseño.gamesActivity"
             android:exported="false" />
+
         <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.PracticandoDiseño" />
-        <activity
-            android:name=".CrearUsuarioActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.example.GamesBreakParte2.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

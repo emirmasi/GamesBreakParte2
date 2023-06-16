@@ -2,7 +2,9 @@
     <string name="app_name">GameBreak</string>
     <string name="button_crear_usuario">Crear Usuario</string>
     <string name="button_ingresar">Ingresar</string>
-    <string name="tv_filtrar">Genero</string>
-    <string name="items_label">Items</string>
+    <string name="items_label">Genero</string>
+    <string name="games_name">nombre</string>
+    <string name="games_genero">genero</string>
+    <string name="games_precio">precio</string>
 
 </resources>

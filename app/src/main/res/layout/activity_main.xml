@@ -13,8 +13,8 @@
         android:layout_marginTop="52dp"
         android:fontFamily="sans-serif"
         android:text="@string/app_name"
-        android:textColor="?attr/colorPrimary"
-        android:textSize="50dp"
+        android:textColor="@color/violet"
+        android:textSize="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,13 +24,17 @@
         android:layout_width="270dp"
         android:layout_height="98dp"
         android:layout_marginTop="176dp"
+        android:backgroundTint="@color/violet"
+        android:fontFamily="sans-serif"
         android:text="@string/button_crear_usuario"
         android:textSize="34sp"
         app:iconSize="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo"
+        />
+
 
     <Button
         android:id="@+id/b_ingresar"
@@ -39,6 +43,7 @@
         android:layout_marginBottom="184dp"
         android:text="@string/button_ingresar"
         android:textSize="34sp"
+        android:backgroundTint="@color/violet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.522"

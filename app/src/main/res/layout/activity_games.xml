@@ -10,6 +10,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,9 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/items_label"
-            android:textColorHint="@color/violet"
             android:inputType="none"
             android:textColor="@color/violet"
+            android:textColorHint="@color/violet"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="52dp" />
@@ -41,6 +42,20 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/titulo_juegos"
+        android:textAlignment="center"
+        android:textColor="@color/violet"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

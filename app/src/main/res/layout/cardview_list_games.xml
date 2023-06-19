@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/black"
     app:cardCornerRadius="12dp"
@@ -17,50 +20,62 @@
             android:id="@+id/games_imagen"
             android:layout_width="230dp"
             android:layout_height="200dp"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="5dp">
 
         </ImageView>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/games_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/games_name"
-                android:textSize="35dp"
-                android:textColor="@color/white"
                 android:layout_marginBottom="8dp"
-                >
+                android:text="@string/games_name"
+                android:textColor="@color/white"
+                android:textSize="25dp">
 
             </TextView>
+
             <TextView
                 android:id="@+id/games_genero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/games_genero"
-                android:textSize="35dp"
-                android:textColor="@color/white"
                 android:layout_marginBottom="8dp"
-                >
+                android:text="@string/games_genero"
+                android:textColor="@color/white"
+                android:textSize="25dp">
 
             </TextView>
+
             <TextView
                 android:id="@+id/games_precio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/games_precio"
-                android:textSize="35dp"
                 android:textColor="@color/white"
-                >
+                android:textSize="25dp">
 
             </TextView>
+
+            <Button
+                android:id="@+id/b_comprar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/gree"
+                android:text="Comprar"
+                android:textColor="@color/violet"
+                android:textSize="25dp">
+
+            </Button>
         </LinearLayout>
 
     </LinearLayout>

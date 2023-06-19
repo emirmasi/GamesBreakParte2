@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity( ) {
 
         ///boton para ir a la activity de crear un usuario
         b_crear_usario.setOnClickListener{
+
+            //esto fue para probar la lista despues tengo que sacarlo
             val intent = Intent(this,gamesActivity::class.java)
             startActivity(intent)
         }

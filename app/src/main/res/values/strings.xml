@@ -6,5 +6,6 @@
     <string name="games_name">nombre</string>
     <string name="games_genero">genero</string>
     <string name="games_precio">precio</string>
+    <string name="titulo_juegos">Juegos</string>
 
 </resources>

@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.Diseño.gamesActivity
+import com.example.Diseño.Activity_Home
 import com.example.practicandodiseo.R
 
 class MainActivity : AppCompatActivity( ) {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity( ) {
         b_crear_usario.setOnClickListener{
 
             //esto fue para probar la lista despues tengo que sacarlo
-            val intent = Intent(this,gamesActivity::class.java)
+            val intent = Intent(this,Activity_Home::class.java)
             startActivity(intent)
         }
         //boton para ir a la activity de ingresar

@@ -7,5 +7,20 @@
     <string name="games_genero">genero</string>
     <string name="games_precio">precio</string>
     <string name="titulo_juegos">Juegos</string>
+    <string name="comision_Steam">Aplica una comisión del 2%</string>
+    <string name="comision_Nakama">Entre las 20:00hs y las 23:59hs aplica una comisión del 1%, sino aplica una comisión del 3%</string>
+    <string name="comision_EpicGames">Si la compra se realiza un sábado o domingo se aplica una comisión del 3%, sino aplica una comisión del 0.75%</string>
+    <string name="total">Total</string>
+    <string name="confirmar_compra">Confirmar compra</string>
+    <string name="elegir_intermediario">Elije un intermediario</string>
+    <string name="nickName">NickName</string>
+    <string name="saldo_disponible">Saldo Disponible</string>
+    <string name="cerrar_sesion">cerrar sesion</string>
+    <!-- TODO: Remove or change this placeholder text -->
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Comprar juego</string>
+    <string name="title_dashboard">Ver Historial</string>
+    <string name="title_notifications">Cargar saldo</string>
 </resources>

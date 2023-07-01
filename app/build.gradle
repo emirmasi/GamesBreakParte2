@@ -35,6 +35,7 @@ android {
     }
     buildFeatures {
         compose true
+        viewBinding true
     }
     composeOptions {
         kotlinCompilerExtensionVersion '1.4.5'
@@ -67,6 +68,15 @@ dependencies {
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    //circleimg
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    ///fragment
+    implementation('androidx.fragment:fragment-ktx:1.6.0')
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
 
 
     testImplementation 'junit:junit:4.13.2'

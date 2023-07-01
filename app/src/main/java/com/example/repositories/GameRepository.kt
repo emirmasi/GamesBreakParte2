@@ -23,7 +23,7 @@ object GameRepository {
         games.add(Game(13L, "God of War: Ragnarok", "2022", "Aventura", 5350.00, "https://assets-prd.ignimgs.com/2022/07/25/9781506733494-1658716557072.jpg"))
     }
 
-    fun get() : List<Game> {
+    fun get() : MutableList<Game> {
         return games
     }
     fun idValido(idAVerificar: Long):Boolean{
@@ -36,7 +36,7 @@ object GameRepository {
     fun getById(id: Long) : Game {
         return games.first{game->game.id == id}
     }
-    fun getGameforGener(genero: String): List<Game>{
-        return games.filter { game->game.genre == genero }
+    fun getGameforGener(genero: String): List<Game> {
+        return games.filter{ game->game.genre == genero }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.Data
 
+import android.os.Build
 import src.main.kotlin.src.main.kotlin.repositories.calcularDifenMeses
 import java.time.LocalDate
 
@@ -8,7 +9,11 @@ abstract class Intermediario() {
     fun calcularCashBack(createdDate: String, amount:Double):Double {
 
         val cashback: Double
-        val fecha:LocalDate = LocalDate.now();
+        val fecha:LocalDate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDate.now()
+        } else {
+            TODO("VERSION.SDK_INT < O")
+        };
         val mesCreacion = fecha.calcularDifenMeses(createdDate)///funcion de Extensio de localDate
 
         cashback = when(mesCreacion){

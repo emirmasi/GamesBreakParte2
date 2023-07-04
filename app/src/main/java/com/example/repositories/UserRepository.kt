@@ -1,6 +1,7 @@
 package repositories
 
 import android.os.Build
+import android.widget.Button
 import com.example.Data.User
 import src.main.kotlin.src.main.kotlin.repositories.hoyConMiFormato
 import java.time.LocalDate
@@ -24,6 +25,7 @@ object UserRepository {
         var nickname:String
         var password:String
         do{
+
             println("Ingrese el nickName:")
             nickname = readln()
 

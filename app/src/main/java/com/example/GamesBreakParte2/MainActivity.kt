@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity( ) {
         //boton para ir a la activity de ingresar
         b_ingresar.setOnClickListener {
 
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+
+
         }
     }
 }

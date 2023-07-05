@@ -17,6 +17,8 @@ class Activity_Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
+
         ///aca tengo que setear el los botones de navegacion y el de cerrar sesion
         ///setear el textView del saldo y el textView de la img
 

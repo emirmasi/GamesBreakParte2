@@ -16,6 +16,9 @@
     <string name="nickName">NickName</string>
     <string name="saldo_disponible">Saldo Disponible</string>
     <string name="cerrar_sesion">cerrar sesion</string>
+    <string name= "NickName">NickName</string>
+    <string name= "Password">Password</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="hello_blank_fragment">Hello blank fragment</string>

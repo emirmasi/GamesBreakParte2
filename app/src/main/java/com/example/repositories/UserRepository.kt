@@ -9,7 +9,8 @@ import java.time.LocalDate
 object UserRepository {
 
     private val users = mutableListOf<User>()
-    lateinit var usuario:User
+     var usuario:User? = null
+
 
     init {
         users.add(User(1504L, "BRIAN_BAYARRI", "abc123", "Brian", "Bayarri", 350.50, "2022/12/10"))
@@ -17,10 +18,18 @@ object UserRepository {
         users.add(User(1510L, "Diegote", "@12345", "Diego", "Gonzales", 12.0, "2018/04/15"))
     }
 
-    fun login(nickName: String,password: String) : User? {
-        return users.firstOrNull { user -> user.nickName == nickName && user.password == password }
+    fun login(nickName: String,password: String) : Boolean{
+
+        usuario = users.firstOrNull { user -> user.nickName == nickName && user.password == password }
+
+        if (usuario!= null)
+            return true
+        else
+            return false
+
+
     }
-    fun loguear(): User?{
+   /* fun loguear(): User?{
 
         var nickname:String
         var password:String
@@ -40,7 +49,7 @@ object UserRepository {
 
         return login(nickname,password)
 
-    }
+    }*/
     fun addUser(newUser: User):Boolean{
        return  users.add(newUser)
     }
@@ -48,7 +57,7 @@ object UserRepository {
         val ultimo = users.last()
         return ultimo.id+1
     }
-    fun crearUsuario():User{
+   /* fun crearUsuario():User{
         var nickname: String
         var password: String
         var name:String
@@ -85,7 +94,7 @@ object UserRepository {
             println("ocurrio un error al registrarse")
         }
         return usuario
-    }
+    }*/
 
 
 }

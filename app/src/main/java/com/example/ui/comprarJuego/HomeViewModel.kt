@@ -1,4 +1,4 @@
-package com.example.practicandodiseo.ui.home
+package com.example.ui.comprarJuego
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.practicandodiseo.ui.notifications
+package com.example.ui.verHistorial
 
 import android.os.Bundle
 import android.view.LayoutInflater

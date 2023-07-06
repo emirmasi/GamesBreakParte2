@@ -1,10 +1,9 @@
-package com.example.GamesBreakParte2
+package com.example
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.Diseño.Activity_Home
 import com.example.practicandodiseo.R
 
 class MainActivity : AppCompatActivity( ) {
@@ -20,13 +19,12 @@ class MainActivity : AppCompatActivity( ) {
         ///boton para ir a la activity de crear un usuario
         b_crear_usario.setOnClickListener{
 
-            //esto fue para probar la lista despues tengo que sacarlo
-            val intent = Intent(this,Activity_Home::class.java)
-            startActivity(intent)
         }
         //boton para ir a la activity de ingresar
+        //en este caso quiero ir al activityHome
         b_ingresar.setOnClickListener {
-
+            val intent = Intent(this,HomePrueba2Activity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso
 class GamesAdapter(private var data: MutableList<Game>,private val itemClickListener: eventoComprar): RecyclerView.Adapter<GamesAdapter.MyViewHolder>(){
 
     interface eventoComprar{
-        fun comprarEvento(id: Long, price: Double)
+        fun comprarEvento(id: Long)
     }
     class MyViewHolder(row: View) :RecyclerView.ViewHolder(row){
         val imageView = row.findViewById<ImageView>(R.id.games_imagen)
@@ -22,7 +22,6 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
         val generoJueog = row.findViewById<TextView>(R.id.games_genero)
         val precioJuego = row.findViewById<TextView>(R.id.games_precio)
         val btn_comprar = row.findViewById<Button>(R.id.b_comprar)
-
 
     }
 
@@ -41,7 +40,7 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
         holder.precioJuego.text = data.get(position).price.toString()
 
         Picasso.get().load(data.get(position).permalink).into(holder.imageView)
-        holder.btn_comprar.setOnClickListener{itemClickListener.comprarEvento(data.get(position).id,data.get(position).price)}
+        holder.btn_comprar.setOnClickListener{itemClickListener.comprarEvento(data.get(position).id)}
     }
 
     fun setListaFiltrada(listaFiltrada: MutableList<Game>){

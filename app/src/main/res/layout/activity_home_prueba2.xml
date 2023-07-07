@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/violet"
     >
 
     <LinearLayout
-        android:layout_width="417dp"
-        android:layout_height="114dp"
+        android:layout_width="413dp"
+        android:layout_height="107dp"
+        android:background="@color/violet"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_activity_home_prueba2"
         tools:ignore="MissingConstraints">
-
-        <TextView
-            android:layout_width="139dp"
-            android:layout_height="match_parent"
-            android:text="@string/saldo_disponible"
-            android:textAlignment="center"
-            android:textSize="30dp"
-            android:textColor="@color/gree"
-            >
-
-        </TextView>
 
         <LinearLayout
             android:layout_width="139dp"
@@ -33,12 +24,11 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="139dp"
                 android:layout_height="80dp"
-                android:src="@drawable/game_crush"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="6dp" />
+                android:layout_marginTop="3dp"
+                android:src="@drawable/game_crush" />
 
             <TextView
+                android:id="@+id/tv_nickName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/nickName"
@@ -52,32 +42,46 @@
 
 
         <TextView
+            android:id="@+id/saldo_disponible"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/saldo_disponible"
+            android:textAlignment="center"
+            android:textColor="@color/gree"
+            android:textSize="30dp">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/tv_cerrar_sesion"
             android:layout_width="138dp"
             android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
             android:text="@string/cerrar_sesion"
             android:textAlignment="center"
             android:textColor="@color/red"
-            android:clickable="true"
             android:textSize="18dp">
 
         </TextView>
     </LinearLayout>
 
 
-
     <fragment
-        android:id="@+id/nav_host_fragment_activity_home"
+        android:id="@+id/nav_host_fragment_activity_home_prueba2"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="411dp"
-        android:layout_height="538dp"
+        android:layout_height="657dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:navGraph="@navigation/mobile_navigation" />
+        app:navGraph="@navigation/mobile_navigation2" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -85,16 +89,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@color/violet"
+        app:itemIconTint="@color/black"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

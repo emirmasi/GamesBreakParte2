@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
 
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/black"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="5dp">
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="5dp">
 
 
     <LinearLayout
@@ -23,7 +21,6 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp">
-
         </ImageView>
 
         <LinearLayout
@@ -71,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/gree"
-                android:text="Comprar"
+                android:text="@string/comprar"
                 android:textColor="@color/violet"
                 android:textSize="25dp">
 

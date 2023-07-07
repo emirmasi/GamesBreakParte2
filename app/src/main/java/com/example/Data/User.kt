@@ -37,7 +37,7 @@ class User (
 
             actualizarSaldo(precioTotal,cashBack)
 
-            compra.imprimirCompra(name,juego.price,precioTotal)
+            //compra.imprimirCompra(name,juego.price,precioTotal)
         }else{
             throw saldont()
         }

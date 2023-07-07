@@ -1,7 +1,6 @@
 package repositories
 
 import android.os.Build
-import android.widget.Button
 import com.example.Data.User
 import src.main.kotlin.src.main.kotlin.repositories.hoyConMiFormato
 import java.time.LocalDate
@@ -9,8 +8,8 @@ import java.time.LocalDate
 object UserRepository {
 
     private val users = mutableListOf<User>()
-     var usuario:User? = null
-
+    var usuario:User? = null
+    var idGame:Long = 1L
 
     init {
         users.add(User(1504L, "BRIAN_BAYARRI", "abc123", "Brian", "Bayarri", 350.50, "2022/12/10"))
@@ -18,23 +17,14 @@ object UserRepository {
         users.add(User(1510L, "Diegote", "@12345", "Diego", "Gonzales", 12.0, "2018/04/15"))
     }
 
-    fun login(nickName: String,password: String) : Boolean{
-
-        usuario = users.firstOrNull { user -> user.nickName == nickName && user.password == password }
-
-        if (usuario!= null)
-            return true
-        else
-            return false
-
-
+    fun login(nickName: String,password: String) : User? {
+        return users.firstOrNull { user -> user.nickName == nickName && user.password == password }
     }
-   /* fun loguear(): User?{
+    fun loguear(): User?{
 
         var nickname:String
         var password:String
         do{
-
             println("Ingrese el nickName:")
             nickname = readln()
 
@@ -49,7 +39,7 @@ object UserRepository {
 
         return login(nickname,password)
 
-    }*/
+    }
     fun addUser(newUser: User):Boolean{
        return  users.add(newUser)
     }

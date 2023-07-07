@@ -8,16 +8,24 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticandoDiseño"
         tools:targetApi="31">
         <activity
+            android:name="com.example.PruebaActivity2"
+            android:exported="false" />
+        <activity
             android:name="com.example.HomePrueba2Activity"
             android:exported="true"
-            android:label="@string/title_activity_home_prueba2" />
+            android:label="@string/title_activity_home_prueba2"
+            android:theme="@style/Theme.PracticandoDiseño" />
+        <activity
+            android:name="com.example.ElegirIntermediario"
+            android:exported="true"
+            android:label="@string/elegir_intermediario" />
         <activity
             android:name="com.example.MainActivity"
             android:exported="true">

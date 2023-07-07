@@ -9,25 +9,12 @@
     >
 
     <LinearLayout
-        android:layout_width="417dp"
-        android:layout_height="114dp"
+        android:layout_width="413dp"
+        android:layout_height="107dp"
+        android:background="@color/violet"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_activity_home_prueba2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-       >
-
-        <TextView
-            android:id="@+id/saldo_disponible"
-            android:layout_width="139dp"
-            android:layout_height="match_parent"
-            android:text="@string/saldo_disponible"
-            android:textAlignment="center"
-            android:textColor="@color/gree"
-            android:textSize="30dp">
-
-        </TextView>
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="139dp"
@@ -37,9 +24,11 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="139dp"
                 android:layout_height="80dp"
+                android:layout_marginTop="3dp"
                 android:src="@drawable/game_crush" />
 
             <TextView
+                android:id="@+id/tv_nickName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/nickName"
@@ -53,10 +42,24 @@
 
 
         <TextView
+            android:id="@+id/saldo_disponible"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/saldo_disponible"
+            android:textAlignment="center"
+            android:textColor="@color/gree"
+            android:textSize="30dp">
+
+        </TextView>
+
+
+        <TextView
             android:id="@+id/tv_cerrar_sesion"
             android:layout_width="138dp"
             android:layout_height="match_parent"
             android:clickable="true"
+            android:gravity="center"
             android:text="@string/cerrar_sesion"
             android:textAlignment="center"
             android:textColor="@color/red"
@@ -69,8 +72,8 @@
     <fragment
         android:id="@+id/nav_host_fragment_activity_home_prueba2"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="402dp"
-        android:layout_height="531dp"
+        android:layout_width="411dp"
+        android:layout_height="657dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,6 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@color/violet"
+        app:itemIconTint="@color/black"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

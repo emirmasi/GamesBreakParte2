@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.ui.comprarJuego.HomeFragment"
+        android:name="com.example.ui.comprarJuego.ComprarJuegoFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_comprar_juego" >
         <action
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.ui.verHistorial.NotificationsFragment"
+        android:name="com.example.ui.verHistorial.VerHistorialFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_ver_historial" >
         <action

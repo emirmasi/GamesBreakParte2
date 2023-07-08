@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.practicandodiseo.R
+import com.example.ui.LoginActivity
 
 class MainActivity : AppCompatActivity( ) {
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity( ) {
         //boton para ir a la activity de ingresar
         //en este caso quiero ir al activityHome
         b_ingresar.setOnClickListener {
-            val intent = Intent(this,HomePrueba2Activity::class.java)
+            val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
     }

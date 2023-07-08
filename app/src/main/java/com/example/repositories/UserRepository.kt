@@ -17,10 +17,15 @@ object UserRepository {
         users.add(User(1510L, "Diegote", "@12345", "Diego", "Gonzales", 12.0, "2018/04/15"))
     }
 
-    fun login(nickName: String,password: String) : User? {
-        return users.firstOrNull { user -> user.nickName == nickName && user.password == password }
+    fun login(nickName: String,password: String) : Boolean {
+        usuario = users.firstOrNull { user -> user.nickName == nickName && user.password == password }
+
+        if (usuario!= null)
+            return true
+        else
+            return false
     }
-    fun loguear(): User?{
+   /* fun loguear(): User?{
 
         var nickname:String
         var password:String
@@ -39,7 +44,7 @@ object UserRepository {
 
         return login(nickname,password)
 
-    }
+    }*/
     fun addUser(newUser: User):Boolean{
        return  users.add(newUser)
     }

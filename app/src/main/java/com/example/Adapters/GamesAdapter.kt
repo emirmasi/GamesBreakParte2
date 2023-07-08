@@ -39,7 +39,7 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
         holder.generoJueog.text = data.get(position).genre
         holder.precioJuego.text = data.get(position).price.toString()
 
-        Picasso.get().load(data.get(position).permalink).into(holder.imageView)
+        Picasso.get().load(data.get(position).permalink).placeholder(R.drawable.game_crush).into(holder.imageView)
         holder.btn_comprar.setOnClickListener{itemClickListener.comprarEvento(data.get(position).id)}
     }
 

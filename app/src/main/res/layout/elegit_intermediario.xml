@@ -256,7 +256,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <androidx.constraintlayout.widget.Group
+    <TextView
         android:id="@+id/tv_cashback"
         android:layout_width="392dp"
         android:layout_height="197dp"
@@ -265,6 +265,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="25dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

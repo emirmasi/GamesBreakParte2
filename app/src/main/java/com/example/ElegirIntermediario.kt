@@ -2,8 +2,10 @@ package com.example
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
@@ -19,6 +21,8 @@ import com.example.GamesBreakParte2.saldont
 import com.example.practicandodiseo.R
 import repositories.GameRepository
 import repositories.UserRepository
+import src.main.kotlin.src.main.kotlin.repositories.hoyConMiFormato
+import java.time.LocalDate
 
 class ElegirIntermediario: AppCompatActivity() {
 
@@ -34,13 +38,12 @@ class ElegirIntermediario: AppCompatActivity() {
     private lateinit var cardEpicGames:CardView
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.elegit_intermediario)
         ///inicializo las compras
 
-        Toast.makeText(this,"estamos en el intermiediario",Toast.LENGTH_LONG)
         tvTotal = findViewById(R.id.en_total_compra)
         tvTotal.text = juegoElegido.price.toString()
 
@@ -49,10 +52,20 @@ class ElegirIntermediario: AppCompatActivity() {
         btnConfirmarCompra = findViewById(R.id.btn_confirmar_compra)
         btnConfirmarCompra.setOnClickListener{
 
+            var cashback = 0.0
+            var hoy  = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                LocalDate.now()
+            } else {
+                TODO("VERSION.SDK_INT < O")
+            }
+
             try {
                 if(intermediarioElegido!=null ){
                     usuarioLogueado?.realizarCompra(intermediarioElegido,juegoElegido)
+                    cashback = intermediarioElegido.calcularCashBack(hoy.hoyConMiFormato(),tvTotal.text.toString().toDouble())
 
+                    tvCashBack.text = "Gracias por su compra le devolvemos $cashback por un beneficio que tenemos "
+                    tvCashBack.visibility = View.VISIBLE
                 }
             }catch (sal:saldont){
 
@@ -82,6 +95,4 @@ class ElegirIntermediario: AppCompatActivity() {
             tvTotal.text = intermediarioElegido.aplicarComision(juegoElegido.price).toString()
         }
     }
-
-
 }

@@ -1,11 +1,9 @@
-package com.example.ui
+package com.example
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.HomePrueba2Activity
-import com.example.practicandodiseo.R
 import com.example.practicandodiseo.databinding.ActivityLoginBinding
 import repositories.UserRepository
 
@@ -31,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else {
-                Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
 

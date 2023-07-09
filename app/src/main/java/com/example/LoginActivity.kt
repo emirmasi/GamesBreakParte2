@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.Data.User
 import com.example.practicandodiseo.databinding.ActivityLoginBinding
 import repositories.UserRepository
 
@@ -19,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         val email = binding.email
         val password = binding.password
         val botonIngresar = binding.botonIngresar
-
+        val sesion: User
 
 
         botonIngresar.setOnClickListener {

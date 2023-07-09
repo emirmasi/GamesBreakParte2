@@ -49,8 +49,8 @@ class CrearUsuarioActivity : AppCompatActivity() {
 
         botonConfirmarCreacionUsuario.setOnClickListener {
             if(textNickname.isNotEmpty() || textPassword.isNotEmpty() || textNombre.isNotEmpty() || textApellido.isNotEmpty() || textDinero.isNotEmpty()) {
-                /*usuario = User(getLastId(),textNickname,textPassword,textNombre,textApellido,textDinero.toDouble(),hoy.hoyConMiFormato())
-                UserRepository.addUser(usuario)*/
+                usuario = User(getLastId(),textNickname,textPassword,textNombre,textApellido,textDinero.toDouble(),hoy.hoyConMiFormato())
+                UserRepository.addUser(usuario)
                 Toast.makeText(this, "Usuario creado con exito", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)

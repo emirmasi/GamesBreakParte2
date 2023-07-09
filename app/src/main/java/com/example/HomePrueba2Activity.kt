@@ -17,7 +17,7 @@ class HomePrueba2Activity : AppCompatActivity() {
     private lateinit var binding: ActivityHomePrueba2Binding
 
     private lateinit var tvCerrarSesion:TextView
-    private lateinit var usuarioLogueado:UserRepository
+    private var usuarioLogueado = UserRepository.usuario
     private lateinit var tvSaldo:TextView
     private lateinit var tvNickName:TextView
 
@@ -41,15 +41,12 @@ class HomePrueba2Activity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //usuarioLogueado.usuario
-
         tvSaldo = binding.root.findViewById(R.id.saldo_disponible)
-        //tvSaldo.text = usuarioLogueado.usuario.money.toString()
-        tvSaldo.text = "1000"
+        tvSaldo.text = usuarioLogueado?.money.toString()
 
         ///inicializamos nickname
         tvNickName = binding.root.findViewById(R.id.tv_nickName)
-        tvNickName.text = "Colo"
+        tvNickName.text = usuarioLogueado?.name.toString()
 
     }
 }

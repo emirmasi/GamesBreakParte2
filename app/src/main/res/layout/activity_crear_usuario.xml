@@ -31,70 +31,70 @@
 
         <EditText
             android:id="@+id/editTextNickname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="348dp"
+            android:layout_height="57dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="Nickname"
             android:inputType="text"
-            android:text="Nickname"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="87dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="87dp" />
 
         <EditText
             android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="345dp"
+            android:layout_height="59dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="Password"
             android:inputType="text"
-            android:text="Password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText2"
             tools:ignore="UnknownId" />
 
         <EditText
             android:id="@+id/editTextNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="61dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="Nombre"
             android:inputType="text"
-            android:text="Nombre"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText3"
             tools:ignore="UnknownId" />
 
         <EditText
             android:id="@+id/editTextApellido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="344dp"
+            android:layout_height="66dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="Apellido"
             android:inputType="text"
-            android:text="Apellido"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText4"
             tools:ignore="UnknownId" />
 
         <EditText
             android:id="@+id/editTextDinero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="57dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
-            android:inputType="text"
-            android:text="Ingresar dinero"
+            android:hint="Ingresar dinero"
+            android:inputType="number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText5"
             tools:ignore="UnknownId" />
@@ -112,8 +112,6 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="526dp" />
-
-
 
 
     </LinearLayout>

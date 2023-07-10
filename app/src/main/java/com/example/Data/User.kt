@@ -29,7 +29,6 @@ class User (
             } else {
                 TODO("VERSION.SDK_INT < O")
             }
-
             val compra = Purchase(PurchaseRepository.getLastId(), this.id, juego.id,precioTotal,hoy.hoyConMiFormato())
             PurchaseRepository.add(compra)
 
@@ -37,7 +36,6 @@ class User (
 
             actualizarSaldo(precioTotal,cashBack)
 
-            //compra.imprimirCompra(name,juego.price,precioTotal)
         }else{
             throw saldont()
         }

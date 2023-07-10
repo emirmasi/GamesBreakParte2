@@ -14,14 +14,19 @@ import repositories.UserRepository
 
 class CargarSaldoFragment : Fragment() {
 
-    lateinit var btnCargar: Button
-    lateinit var monto: EditText
     private var _binding: FragmentCargarSaldoBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+    interface RefreshListener {
+        fun onRefreshRequested()
+    }
+    private fun requestRefresh() {
+        val activity = activity
+        if (activity is RefreshListener) {
+            activity.onRefreshRequested()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +41,10 @@ class CargarSaldoFragment : Fragment() {
 
         btnCargar.setOnClickListener {
             UserRepository.usuario?.cargarSaldo(saldo.text.toString().toDouble())
+            requestRefresh()
             val mostrar = UserRepository.usuario?.money.toString()
             Toast.makeText(context,mostrar, Toast.LENGTH_LONG).show()
+
         }
         return root
     }

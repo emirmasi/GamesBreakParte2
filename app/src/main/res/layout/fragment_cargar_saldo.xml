@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ui.cargarSaldo.CargarSaldoFragment"
-    android:background="@color/violet">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/text_dashboard"
@@ -16,7 +16,7 @@
         android:onClick="cargarSaldo"
         android:text="Cargar Saldo"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +34,8 @@
         android:ems="10"
         android:inputType="number"
         android:hint="0"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />

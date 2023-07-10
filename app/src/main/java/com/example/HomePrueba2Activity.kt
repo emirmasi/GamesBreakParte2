@@ -10,14 +10,14 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.practicandodiseo.R
 
 import com.example.practicandodiseo.databinding.ActivityHomePrueba2Binding
+import com.example.ui.cargarSaldo.CargarSaldoFragment
 import repositories.UserRepository
 
-class HomePrueba2Activity : AppCompatActivity() {
+class HomePrueba2Activity : AppCompatActivity(),CargarSaldoFragment.RefreshListener {
 
     private lateinit var binding: ActivityHomePrueba2Binding
 
     private lateinit var tvCerrarSesion:TextView
-    private var usuarioLogueado = UserRepository.usuario
     private lateinit var tvSaldo:TextView
     private lateinit var tvNickName:TextView
 
@@ -42,11 +42,14 @@ class HomePrueba2Activity : AppCompatActivity() {
         }
 
         tvSaldo = binding.root.findViewById(R.id.saldo_disponible)
-        tvSaldo.text = usuarioLogueado?.money.toString()
+        tvSaldo.text = UserRepository.usuario?.money.toString()
 
         ///inicializamos nickname
         tvNickName = binding.root.findViewById(R.id.tv_nickName)
-        tvNickName.text = usuarioLogueado?.name.toString()
+        tvNickName.text = UserRepository.usuario?.name.toString()
 
+    }
+    override fun onRefreshRequested() {
+        tvSaldo.text = UserRepository.usuario?.money.toString()
     }
 }

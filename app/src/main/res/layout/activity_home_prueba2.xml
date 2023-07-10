@@ -10,11 +10,13 @@
 
     <LinearLayout
         android:layout_width="413dp"
-        android:gravity="top"
         android:layout_height="107dp"
         android:background="@color/violet"
+        android:gravity="top"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_activity_home_prueba2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -50,11 +52,10 @@
             android:text="@string/saldo_disponible"
             android:textAlignment="center"
             android:textColor="@color/gree"
-            android:textSize="10dp"
+            android:textSize="28dp"
             tools:ignore="TextSizeCheck">
 
         </TextView>
-
 
         <TextView
             android:id="@+id/tv_cerrar_sesion"
@@ -74,8 +75,8 @@
     <fragment
         android:id="@+id/nav_host_fragment_activity_home_prueba2"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="410dp"
-        android:layout_height="1073dp"
+        android:layout_width="413dp"
+        android:layout_height="1315dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintHorizontal_bias="0.0"

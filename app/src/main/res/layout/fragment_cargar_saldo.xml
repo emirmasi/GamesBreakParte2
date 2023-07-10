@@ -8,17 +8,44 @@
 
     <TextView
         android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="389dp"
+        android:layout_height="59dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:onClick="cargarSaldo"
+        android:text="Cargar Saldo"
         android:textAlignment="center"
-        android:text="fragment dasboard"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.254"
+        tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/saldoinput"
+        android:layout_width="207dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
+
+    <Button
+        android:id="@+id/btnCargarSaldo"
+        android:layout_width="114dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:text="Cargar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saldoinput" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

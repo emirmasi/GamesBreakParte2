@@ -19,12 +19,16 @@ import com.example.Data.Steam
 import com.example.Data.User
 import com.example.GamesBreakParte2.saldont
 import com.example.practicandodiseo.R
+import com.example.practicandodiseo.databinding.ElegitIntermediarioBinding
 import repositories.GameRepository
 import repositories.UserRepository
 import src.main.kotlin.src.main.kotlin.repositories.hoyConMiFormato
 import java.time.LocalDate
 
 class ElegirIntermediario: AppCompatActivity() {
+
+    ///vamos a usar binding
+    private lateinit var binding: ElegitIntermediarioBinding
 
     private var usuarioLogueado = UserRepository.usuario
     private var juegoElegido = GameRepository.getById(UserRepository.idGame)
@@ -41,15 +45,18 @@ class ElegirIntermediario: AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.elegit_intermediario)
-        ///inicializo las compras
+        binding = ElegitIntermediarioBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        ///inicializo laas variables
 
-        tvTotal = findViewById(R.id.en_total_compra)
+        tvTotal = binding.enTotalCompra
         tvTotal.text = juegoElegido.price.toString()
-
-        tvCashBack = findViewById(R.id.tv_cashback)
-
-        btnConfirmarCompra = findViewById(R.id.btn_confirmar_compra)
+        bt_atras = binding.ibVolverInter
+        cardNakama = binding.cvNakama
+        cardSteam = binding.cvSteam
+        cardEpicGames = binding.cvEpicgames
+        tvCashBack = binding.tvCashback
+        btnConfirmarCompra = binding.btnConfirmarCompra
         btnConfirmarCompra.setOnClickListener{
 
             var cashback = 0.0
@@ -72,27 +79,18 @@ class ElegirIntermediario: AppCompatActivity() {
                     Toast.makeText(this,sal.message,Toast.LENGTH_LONG)
             }
         }
-        bt_atras = findViewById(R.id.ib_volver_Inter)
+
         bt_atras.setOnClickListener {
             var intent = Intent(this,HomePrueba2Activity::class.java)
             startActivity(intent)
         }
 
-                ///tengo que hacer que haga un click en cada
-        cardSteam = findViewById(R.id.cv_steam)
-        cardSteam.setOnClickListener {
-            intermediarioElegido = Steam()
-            tvTotal.text = intermediarioElegido.aplicarComision(juegoElegido.price).toString()
-        }
-        cardNakama = findViewById(R.id.cv_nakama)
-        cardNakama.setOnClickListener {
-            intermediarioElegido = Nakama()
-            tvTotal.text = intermediarioElegido.aplicarComision(juegoElegido.price).toString()
-        }
-        cardEpicGames = findViewById(R.id.cv_epicgames)
-        cardEpicGames.setOnClickListener {
-            intermediarioElegido = EpicGames()
-            tvTotal.text = intermediarioElegido.aplicarComision(juegoElegido.price).toString()
-        }
+        cardSteam.setOnClickListener { setIntermediarioElegido(Steam()) }
+        cardNakama.setOnClickListener { setIntermediarioElegido(Nakama()) }
+        cardEpicGames.setOnClickListener { setIntermediarioElegido(EpicGames()) }
+    }
+    fun setIntermediarioElegido(intermediario: Intermediario) {
+        intermediarioElegido = intermediario
+        tvTotal.text = intermediario.aplicarComision(juegoElegido.price).toString()
     }
 }

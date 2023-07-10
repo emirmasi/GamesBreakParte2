@@ -27,7 +27,6 @@ class ComprarJuegoFragment : Fragment(),GamesAdapter.eventoComprar {
     private lateinit var adapterJuego: GamesAdapter
     private lateinit var recyclerView: RecyclerView
     private var listaDeJuegos = GameRepository.get()
-    private var usuarioLogueado = UserRepository.usuario
 
     private val binding get() = _binding!!
 
@@ -78,12 +77,10 @@ class ComprarJuegoFragment : Fragment(),GamesAdapter.eventoComprar {
         super.onDestroyView()
         _binding = null
     }
-    ///nos pasaron el id del juego y el precio ahora se lo tenemos que pasar al elegir intermediario
+
     override fun comprarEvento(id: Long) {
-        ///aca deberiamos ir al intermediario.kt y calcular la comision y el casback
         UserRepository.idGame = id
         val intent = Intent(activity,ElegirIntermediario::class.java)
-        Toast.makeText(context,"vamos a elegir intermetdiario",Toast.LENGTH_SHORT)
         context?.startActivity(intent)
     }
 }

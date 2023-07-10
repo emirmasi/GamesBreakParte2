@@ -6,19 +6,19 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/comprar_juego_icono"
-        android:title="@string/title_home"
 
-        />
+
+        android:title="TODO" />
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ver_historial_icono"
-        android:title="@string/title_dashboard" />
+        android:title="TODO" />
 
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/cargar_saldo_icono"
-        android:title="@string/title_notifications" />
+        android:title="TODO" />
 
 
 </menu>

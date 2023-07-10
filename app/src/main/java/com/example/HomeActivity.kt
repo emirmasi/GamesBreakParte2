@@ -8,14 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.practicandodiseo.R
-import com.example.practicandodiseo.databinding.ActivityHomePrueba2Binding
+import com.example.practicandodiseo.databinding.ActivityHomeBinding
 import com.example.ui.cargarSaldo.CargarSaldoFragment
 import repositories.UserRepository
 import src.main.kotlin.src.main.kotlin.repositories.format
 
 class HomeActivity : AppCompatActivity(),CargarSaldoFragment.RefreshListener {
 
-    private lateinit var binding: ActivityHomePrueba2Binding
+    private lateinit var binding: ActivityHomeBinding
 
     private lateinit var tvCerrarSesion:TextView
     private lateinit var tvSaldo:TextView
@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity(),CargarSaldoFragment.RefreshListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityHomePrueba2Binding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

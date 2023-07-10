@@ -25,7 +25,6 @@
         <activity
             android:name="com.example.HomeActivity"
             android:exported="true"
-            android:label="@string/title_activity_home_prueba2"
             android:theme="@style/Theme.PracticandoDiseño" />
         <activity
             android:name="com.example.ElegirIntermediario"

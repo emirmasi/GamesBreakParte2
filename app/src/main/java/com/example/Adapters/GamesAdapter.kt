@@ -26,7 +26,7 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val layout = LayoutInflater.from(parent.context).inflate(R.layout.cardview_list_games,parent,false)
+        val layout = LayoutInflater.from(parent.context).inflate(R.layout.item_lista_juegos,parent,false)
         return MyViewHolder(layout)
     }
 
@@ -39,7 +39,7 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
         holder.generoJueog.text = data.get(position).genre
         holder.precioJuego.text = data.get(position).price.toString()
 
-        Picasso.get().load(data.get(position).permalink).placeholder(R.drawable.game_crush).into(holder.imageView)
+        Picasso.get().load(data.get(position).permalink).placeholder(R.drawable.game_break_logo).into(holder.imageView)
         holder.btn_comprar.setOnClickListener{itemClickListener.comprarEvento(data.get(position).id)}
     }
 

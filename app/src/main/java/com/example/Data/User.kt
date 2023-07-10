@@ -19,9 +19,10 @@ class User (
     override fun toString(): String {
         return "User(id=$id, nickName='$nickName', password='$password', name='$name', surname='$surname', money=$money, createdDate='$createdDate')"
     }
-    fun realizarCompra(intermediario:Intermediario,juego:Game){
+    fun realizarCompra(intermediario:Intermediario,juego:Game):Double{
 
         val precioTotal = intermediario.aplicarComision(juego.price)
+        val cashBack:Double
 
         if(comprobarSaldo(precioTotal)){
             val hoy = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -32,16 +33,17 @@ class User (
             val compra = Purchase(PurchaseRepository.getLastId(), this.id, juego.id,precioTotal,hoy.hoyConMiFormato())
             PurchaseRepository.add(compra)
 
-            val cashBack = intermediario.calcularCashBack(hoy.hoyConMiFormato(),precioTotal)
+            cashBack = intermediario.calcularCashBack(this.createdDate,precioTotal)
 
             actualizarSaldo(precioTotal,cashBack)
 
         }else{
             throw saldont()
         }
+        return cashBack
     }
     fun actualizarSaldo(precioTotal: Double,cashBack: Double){
-        this.money -= (precioTotal + cashBack)
+        this.money -= (precioTotal - cashBack)
     }
 
     fun comprobarSaldo(precioDelJuego: Double): Boolean{

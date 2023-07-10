@@ -27,8 +27,8 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="139dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="3dp"
-                android:src="@drawable/game_crush" />
+                android:layout_marginTop="5dp"
+                android:src="@drawable/game_break_logo" />
 
             <TextView
                 android:id="@+id/tv_nickName"
@@ -59,10 +59,13 @@
 
         <TextView
             android:id="@+id/tv_cerrar_sesion"
-            android:layout_width="115dp"
+            android:layout_width="133dp"
             android:layout_height="match_parent"
             android:clickable="true"
             android:gravity="center"
+            android:autoLink="web"
+            android:textColorLink="@color/white"
+            android:linksClickable="true"
             android:text="@string/cerrar_sesion"
             android:textAlignment="center"
             android:textColor="@color/red"
@@ -88,14 +91,13 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        app:itemTextColor="@color/white"
-        app:itemBackground="@color/violet"
-        app:itemIconTint="@color/black"
+        android:layout_width="405dp"
+        android:layout_height="79dp"
         android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/violet"
+        app:itemIconSize="38dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

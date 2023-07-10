@@ -39,7 +39,7 @@ class CrearUsuarioActivity : AppCompatActivity() {
         botonConfirmarCreacionUsuario.setOnClickListener {
             if(UserRepository.crearUsuario(textNickname.text.toString(),textPassword.text.toString(),textNombre.text.toString(),textApellido.text.toString(),textDinero.text.toString().toDouble())) {
                 Toast.makeText(this, "Usuario creado con exito", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomePrueba2Activity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }else{
                 Toast.makeText(this, "Completar todos los campos", Toast.LENGTH_SHORT).show()

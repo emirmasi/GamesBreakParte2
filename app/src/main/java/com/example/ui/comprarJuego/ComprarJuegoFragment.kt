@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -44,7 +43,7 @@ class ComprarJuegoFragment : Fragment(),GamesAdapter.eventoComprar {
         val items = listOf("Todos","Survival Horror","Sandbox","Deporte","Shooter","Pelea","Carreras","Accion","Aventura")
         val autoComplete: AutoCompleteTextView = root.findViewById(R.id.auto_complete)
 
-        val adapterFil = ArrayAdapter(requireActivity(), R.layout.list_item,items)
+        val adapterFil = ArrayAdapter(requireActivity(), R.layout.item_filtro,items)
         autoComplete.setAdapter(adapterFil)
 
         ///filtro

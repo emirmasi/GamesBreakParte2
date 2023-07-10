@@ -8,12 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.practicandodiseo.R
-
 import com.example.practicandodiseo.databinding.ActivityHomePrueba2Binding
 import com.example.ui.cargarSaldo.CargarSaldoFragment
 import repositories.UserRepository
+import src.main.kotlin.src.main.kotlin.repositories.format
 
-class HomePrueba2Activity : AppCompatActivity(),CargarSaldoFragment.RefreshListener {
+class HomeActivity : AppCompatActivity(),CargarSaldoFragment.RefreshListener {
 
     private lateinit var binding: ActivityHomePrueba2Binding
 
@@ -42,14 +42,14 @@ class HomePrueba2Activity : AppCompatActivity(),CargarSaldoFragment.RefreshListe
         }
 
         tvSaldo = binding.root.findViewById(R.id.saldo_disponible)
-        tvSaldo.text = UserRepository.usuario?.money.toString()
+        tvSaldo.text = "$${UserRepository.usuario?.money?.format()}"
 
         ///inicializamos nickname
         tvNickName = binding.root.findViewById(R.id.tv_nickName)
-        tvNickName.text = UserRepository.usuario?.name.toString()
+        tvNickName.text = UserRepository.usuario?.name
 
     }
     override fun onRefreshRequested() {
-        tvSaldo.text = UserRepository.usuario?.money.toString()
+        tvSaldo.text = "$${UserRepository.usuario?.money?.format()}"
     }
 }

@@ -9,10 +9,10 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/game_break_logo"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/game_break_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticandoDiseño"
         tools:targetApi="31">
@@ -23,7 +23,7 @@
             android:name="com.example.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.HomePrueba2Activity"
+            android:name="com.example.HomeActivity"
             android:exported="true"
             android:label="@string/title_activity_home_prueba2"
             android:theme="@style/Theme.PracticandoDiseño" />

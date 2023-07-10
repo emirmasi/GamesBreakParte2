@@ -5,19 +5,19 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/i_compra"
+        android:icon="@drawable/comprar_juego_icono"
         android:title="@string/title_home"
 
         />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/report_7041822"
+        android:icon="@drawable/ver_historial_icono"
         android:title="@string/title_dashboard" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/up_arrow_6798205"
+        android:icon="@drawable/cargar_saldo_icono"
         android:title="@string/title_notifications" />
 
 

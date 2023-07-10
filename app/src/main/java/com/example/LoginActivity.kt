@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         botonIngresar.setOnClickListener {
             if (UserRepository.login(email.getText().toString(), password.getText().toString())){
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomePrueba2Activity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }
             else {

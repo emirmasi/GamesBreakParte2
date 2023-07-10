@@ -33,13 +33,13 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:hint="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_dashboard" />
 
     <Button
-        android:id="@+id/btncargarsaldo"
+        android:id="@+id/btnCargarSaldo"
         android:layout_width="114dp"
         android:layout_height="55dp"
         android:layout_marginTop="40dp"

@@ -38,6 +38,8 @@
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:hint="Nickname"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:inputType="text"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints"
@@ -53,6 +55,8 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText2"
             tools:ignore="UnknownId" />
@@ -67,6 +71,8 @@
             android:ems="10"
             android:hint="Nombre"
             android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText3"
             tools:ignore="UnknownId" />
@@ -81,6 +87,8 @@
             android:ems="10"
             android:hint="Apellido"
             android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText4"
             tools:ignore="UnknownId" />
@@ -93,8 +101,10 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:textColor="@color/white"
             android:hint="Ingresar dinero"
             android:inputType="number"
+            android:textColorHint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextText5"
             tools:ignore="UnknownId" />

@@ -41,6 +41,7 @@
             android:id="@+id/rv_juegos_disponible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"

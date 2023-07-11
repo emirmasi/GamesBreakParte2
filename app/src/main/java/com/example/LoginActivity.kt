@@ -16,26 +16,27 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val email = binding.email
+        val email = binding.etLoginNickname
         val password = binding.password
         val botonIngresar = binding.botonIngresar
-        val sesion: User
 
 
         botonIngresar.setOnClickListener {
-            if (UserRepository.login(email.getText().toString(), password.getText().toString())){
-                Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+            val nickName = email.text.toString().trim()
+            val passwordUser = password.text.toString().trim()
+            if (nickName.isEmpty() || passwordUser.isEmpty()){
+                Toast.makeText(this,"alguno de los campos esta vacio",Toast.LENGTH_LONG).show()
+            }else{
+                if(UserRepository.login(nickName,passwordUser)){
+                    Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                }else {
+                    Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+                }
             }
-            else {
-                Toast.makeText(this, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-            }
+
         }
-
-
-
 
     }
 

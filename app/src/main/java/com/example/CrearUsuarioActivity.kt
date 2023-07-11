@@ -29,7 +29,7 @@ class CrearUsuarioActivity : AppCompatActivity() {
         binding = ActivityCrearUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-         textNickname= binding.editTextNickname
+         textNickname = binding.editTextNickname
          textPassword = binding.editTextPassword
          textNombre = binding.editTextNombre
          textApellido = binding.editTextApellido
@@ -37,12 +37,21 @@ class CrearUsuarioActivity : AppCompatActivity() {
          botonConfirmarCreacionUsuario = binding.buttonConfirmarCrearUsuario
 
         botonConfirmarCreacionUsuario.setOnClickListener {
-            if(UserRepository.crearUsuario(textNickname.text.toString(),textPassword.text.toString(),textNombre.text.toString(),textApellido.text.toString(),textDinero.text.toString().toDouble())) {
-                Toast.makeText(this, "Usuario creado con exito", Toast.LENGTH_SHORT).show()
+            val nickname = textNickname.text.toString().trim()
+            val password = textPassword.text.toString().trim()
+            val nombre = textNombre.text.toString().trim()
+            val apellido = textApellido.text.toString().trim()
+            val dineroText = textDinero.text.toString().trim()
+
+            if (nickname.isEmpty() || password.isEmpty() || nombre.isEmpty() || apellido.isEmpty()) {
+                Toast.makeText(this, "Error, completa todos los campos", Toast.LENGTH_LONG).show()
+            } else {
+                val dinero = if (dineroText.isNotEmpty()) dineroText.toDouble() else 0.0
+                UserRepository.crearUsuario(nickname, password, nombre, apellido, dinero)
+                Toast.makeText(this, "Usuario creado con éxito", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
-            }else{
-                Toast.makeText(this, "Completar todos los campos", Toast.LENGTH_SHORT).show()
+
             }
         }
     }

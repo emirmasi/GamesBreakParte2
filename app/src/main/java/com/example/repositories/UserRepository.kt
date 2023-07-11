@@ -19,9 +19,8 @@ object UserRepository {
     }
 
     fun login(nickName: String,password: String) : Boolean {
-        usuario = users.firstOrNull { user -> user.nickName == nickName && user.password == password }
-
-        return usuario!= null
+        usuario = users.find{ user -> user.nickName == nickName && user.password == password }
+        return usuario != null
     }
 
 
@@ -32,10 +31,8 @@ object UserRepository {
         val ultimo = users.last()
         return ultimo.id+1
     }
-    fun crearUsuario(nickname:String,password: String,name: String,surname:String,money:Double):Boolean{
-        if(nickname.isEmpty() || password.isEmpty() || name.isEmpty() || surname.isEmpty()) {
-            return false
-        }else{
+    fun crearUsuario(nickname:String,password: String,name: String,surname:String,money:Double){
+
             val hoy: LocalDate = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 LocalDate.now()
             } else {
@@ -43,8 +40,7 @@ object UserRepository {
             }
             usuario = User(getLastId(),nickname,password,name,surname,money,hoy.hoyConMiFormato())
             addUser(usuario!!)
-        }
-        return true
+
     }
 
 }

@@ -19,7 +19,10 @@
     <string name="comprar">comprar</string>
     <string name="cashback">GRACIAS POR SU COMPRA</string>
     <string name="titulo_crear_usuario">Completar los siguientes campos para crear usuario</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="button_cargar">Cargar</string>
+    <string name="cargar_saldo">Cargar Saldo</string>
+    <string name="comprarJuego">Comprar Juego</string>
+    <string name="ver_historial">Ver Historial</string>
 
 
 </resources>

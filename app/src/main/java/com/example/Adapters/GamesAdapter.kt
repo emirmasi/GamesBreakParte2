@@ -35,19 +35,26 @@ class GamesAdapter(private var data: MutableList<Game>,private val itemClickList
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.nombreJuego.text = data.get(position).name
-        holder.generoJueog.text = data.get(position).genre
-        holder.precioJuego.text = data.get(position).price.toString()
+        val juego = data[position]
 
-        Picasso.get().load(data.get(position).permalink).placeholder(R.drawable.game_break_logo).into(holder.imageView)
-        holder.btn_comprar.setOnClickListener{itemClickListener.comprarEvento(data.get(position).id)}
+        holder.nombreJuego.text = juego.name
+        holder.generoJueog.text = juego.genre
+        holder.precioJuego.text = juego.price.toString()
+
+        Picasso.get()
+            .load(juego.permalink)
+            .placeholder(R.drawable.game_break_logo)
+            .into(holder.imageView)
+
+        holder.btn_comprar.setOnClickListener {
+            itemClickListener.comprarEvento(juego.id)
+        }
     }
 
     fun setListaFiltrada(listaFiltrada: MutableList<Game>){
         this.data = listaFiltrada
         notifyDataSetChanged()
     }
-
 
 }
 

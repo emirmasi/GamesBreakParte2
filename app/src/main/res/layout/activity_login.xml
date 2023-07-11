@@ -8,8 +8,8 @@
     tools:context="com.example.LoginActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -19,11 +19,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        >
 
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/et_loginNickname"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="32dp"
@@ -66,7 +66,6 @@
             android:text="@string/button_ingresar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="381dp" />
 
     </LinearLayout>

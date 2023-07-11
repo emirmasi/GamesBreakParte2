@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.ui.comprarJuego.ComprarJuegoFragment"
-        android:label="title_home"
+        android:label="home"
         tools:layout="@layout/fragment_comprar_juego" >
         <action
             android:id="@+id/action_navigation_home_to_navigation_dashboard"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.ui.cargarSaldo.CargarSaldoFragment"
-        android:label="title_dashboard"
+        android:label="basorar"
         tools:layout="@layout/fragment_cargar_saldo" >
         <action
             android:id="@+id/action_navigation_dashboard_to_navigation_home"
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.ui.verHistorial.VerHistorialFragment"
-        android:label="title_notifications"
+        android:label="sasdjsa"
         tools:layout="@layout/fragment_ver_historial" >
         <action
             android:id="@+id/action_navigation_notifications_to_navigation_home"

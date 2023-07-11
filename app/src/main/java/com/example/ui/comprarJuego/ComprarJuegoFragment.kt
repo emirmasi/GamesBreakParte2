@@ -65,9 +65,8 @@ class ComprarJuegoFragment : Fragment(),GamesAdapter.eventoComprar {
 
 
     private fun initRecyclerview() {
-        val layoutManager = LinearLayoutManager(context)
         recyclerView = binding.rvJuegosDisponible
-        recyclerView.layoutManager = layoutManager
+        recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
         adapterJuego = GamesAdapter(GameRepository.get(),this)
         recyclerView.adapter = adapterJuego

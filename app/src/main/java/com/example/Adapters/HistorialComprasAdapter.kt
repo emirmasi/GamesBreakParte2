@@ -11,6 +11,7 @@ import com.example.practicandodiseo.R
 import com.squareup.picasso.Picasso
 import data.Purchase
 import repositories.GameRepository
+import src.main.kotlin.src.main.kotlin.repositories.format
 
 class HistorialComprasAdapter(private var data: MutableList<Purchase>): RecyclerView.Adapter<HistorialComprasAdapter.MyViewHolder>() {
 
@@ -29,14 +30,18 @@ class HistorialComprasAdapter(private var data: MutableList<Purchase>): Recycler
     override fun getItemCount(): Int {
         return data.size
     }
-
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.nombreJuego.text =GameRepository.getById(data.get(position).gameId).name
-        holder.generoJuego.text = GameRepository.getById(data.get(position).gameId).genre
-        holder.precioJuego.text = GameRepository.getById(data.get(position).gameId).price.toString()
 
-        Picasso.get().load(GameRepository.getById(data.get(position).gameId).permalink).placeholder(R.drawable.game_break_logo).into(holder.imageView)
+        val datos = data.get(position)
+
+        holder.nombreJuego.text =GameRepository.getById(datos.gameId).name
+        holder.generoJuego.text = GameRepository.getById(datos.gameId).genre
+        holder.precioJuego.text = datos.amount.format()
+
+        Picasso.get().
+        load(GameRepository.getById(datos.gameId).permalink).
+        placeholder(R.drawable.game_break_logo).
+        into(holder.imageView)
     }
-
 
 }

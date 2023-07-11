@@ -31,7 +31,7 @@ class ElegirIntermediario: AppCompatActivity() {
     private var juegoElegido = GameRepository.getById(UserRepository.idGame)
     private lateinit var tvTotal:TextView
     private lateinit var btnConfirmarCompra:Button
-    private lateinit var intermediarioElegido:Intermediario
+    private  var intermediarioElegido: Intermediario? =null
     private lateinit var bt_atras:ImageButton
     private lateinit var tvCashBack:TextView
     private lateinit var cardSteam:CardView
@@ -56,18 +56,24 @@ class ElegirIntermediario: AppCompatActivity() {
 
         btnConfirmarCompra.setOnClickListener{
 
-            try {
-                val cashback =  usuarioLogueado?.realizarCompra(intermediarioElegido,juegoElegido)
-                val cashbackText = if (cashback != 0.0) {
-                    "Gracias por su compra. Le devolvemos ${cashback?.format()} por un beneficio que tenemos."
-                } else {
-                    "Gracias por su compra. Vuelva pronto."
+            if(intermediarioElegido != null){
+                try {
+                    val cashback =  usuarioLogueado?.realizarCompra(intermediarioElegido!!,juegoElegido)
+                    val cashbackText = if (cashback != 0.0) {
+                        "Gracias por su compra. Le devolvemos ${cashback?.format()} por un beneficio que tenemos."
+                    } else {
+                        "Gracias por su compra. Vuelva pronto."
+                    }
+                    tvCashBack.text = cashbackText
+                    tvCashBack.visibility = View.VISIBLE
+                }catch (sal:saldont){
+                    Toast.makeText(this,sal.message,Toast.LENGTH_LONG).show()
                 }
-                tvCashBack.text = cashbackText
-                tvCashBack.visibility = View.VISIBLE
-            }catch (sal:saldont){
-                Toast.makeText(this,sal.message,Toast.LENGTH_LONG).show()
+            }else{
+                Toast.makeText(this,"elija un intermediario",Toast.LENGTH_LONG).show()
             }
+
+
         }
 
         bt_atras.setOnClickListener {

@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:text="@string/cargar_saldo"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            tools:ignore="OnClick" />
+            />
 
         <EditText
             android:id="@+id/saldoinput"

@@ -37,7 +37,7 @@
             android:textColorHint="@color/material_dynamic_neutral10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+             />
 
         <EditText
             android:id="@+id/password"

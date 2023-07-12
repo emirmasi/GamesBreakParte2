@@ -40,10 +40,17 @@ class CargarSaldoFragment : Fragment() {
         val btnCargar: Button = root.findViewById(R.id.btnCargarSaldo)
 
         btnCargar.setOnClickListener {
-            UserRepository.usuario?.cargarSaldo(saldo.text.toString().toDouble())
-            requestRefresh()
-            val mostrar = UserRepository.usuario?.money.toString()
-            Toast.makeText(context,mostrar, Toast.LENGTH_LONG).show()
+            var saldoACargar = saldo.text.toString()
+
+            if(saldoACargar.isEmpty()) {
+                Toast.makeText(context,"ingrese un numero",Toast.LENGTH_SHORT).show()
+            }else{
+                UserRepository.usuario?.cargarSaldo(saldoACargar.toDouble())
+                requestRefresh()
+                val mostrar = UserRepository.usuario?.money.toString()
+                Toast.makeText(context,mostrar, Toast.LENGTH_LONG).show()
+            }
+
 
         }
         return root

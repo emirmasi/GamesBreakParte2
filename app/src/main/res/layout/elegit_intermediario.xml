@@ -8,9 +8,9 @@
     android:background="@color/violet">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="312dp"
-        android:layout_height="37dp"
+        android:id="@+id/tv_tituloElegirInter"
+        android:layout_width="282dp"
+        android:layout_height="46dp"
         android:hint="0"
         android:text="@string/elegir_intermediario"
         android:textColor="@color/black"
@@ -19,7 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/ib_volver_Inter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/ib_volver_Inter"
@@ -27,9 +28,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/tv_tituloElegirInter"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/btn_dialog" />
 
     <LinearLayout
@@ -40,7 +41,7 @@
         app:layout_constraintBottom_toTopOf="@+id/en_total_compra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="@id/tv_tituloElegirInter"
         >
 
         <androidx.cardview.widget.CardView
@@ -205,21 +206,23 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="94dp"
-        android:layout_height="48dp"
+        android:layout_width="77dp"
+        android:layout_height="42dp"
         android:layout_marginStart="28dp"
+        android:layout_marginEnd="35dp"
         android:text="@string/total"
         android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_confirmar_compra"
+        app:layout_constraintEnd_toStartOf="@+id/en_total_compra"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/en_total_compra"
-        android:layout_width="128dp"
-        android:layout_height="48dp"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="141dp"

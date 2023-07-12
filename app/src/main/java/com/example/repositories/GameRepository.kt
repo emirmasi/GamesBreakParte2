@@ -26,13 +26,7 @@ object GameRepository {
     fun get() : MutableList<Game> {
         return games
     }
-    fun idValido(idAVerificar: Long):Boolean{
-        for(juego in games){
-            if(juego.id == idAVerificar)
-                return true
-        }
-        return false
-    }
+
     fun getById(id: Long) : Game {
         return games.first{game->game.id == id}
     }
